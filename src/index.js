@@ -103,7 +103,7 @@ class Store extends BaseStore {
           config.ServerSideEncryption = this.serverSideEncryption
         }
         this.s3()
-          .putObject(config, (err, data) => err ? reject(err) : resolve(`${this.host}/${fileName}`))
+          .putObject(config, (err, data) => err ? reject(err) : resolve(`/${fileName}`))
       })
       .catch(err => reject(err))
     })
